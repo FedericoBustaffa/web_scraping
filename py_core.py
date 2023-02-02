@@ -1,7 +1,13 @@
 
-if __name__ == "__main__":
-    facce = { "testa", "croce" }
-    prob_testa = 1 / len(facce)
+class persona:
+    def __init__(self, nome, cognome, anno, occupazione):
+        self.nome = nome
+        self.cognome = cognome
+        self.anno = anno
+        self.occupazione = occupazione
 
-    print(f"La probabilita' che esca testa e': {prob_testa}")
+
+if __name__ == "__main__":
+    p = persona("Federico", "Bustaffa", 1999, "Studente")
+    print(f"Nome: {p.nome}\nCognome: {p.cognome}")
 
