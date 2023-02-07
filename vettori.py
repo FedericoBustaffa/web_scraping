@@ -79,11 +79,10 @@ if __name__ == "__main__":
     print(f"Random vector\n{v}")
 
     # exporting and importing arrays
-    np.save("array.npy", v)
-    x = np.load("array.npy")
-    print(f"Imported array\n{x}")
-
-    np.savetxt("array.csv", v, delimiter=",")
-    x = np.loadtxt("array.csv", delimiter=",")
-    print(f"Imported array\n{x}")
-
+    # np.save("array.npy", v)
+    # x = np.load("array.npy")
+    # print(f"Imported array\n{x}")
+    #
+    # np.savetxt("array.csv", v, delimiter=",")
+    # x = np.loadtxt("array.csv", delimiter=",")
+    # print(f"Imported array\n{x}")
