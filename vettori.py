@@ -1,4 +1,5 @@
 import numpy as np
+import numpy.random as rnd
 
 if __name__ == "__main__":
     print("--- Array ---")
@@ -8,14 +9,14 @@ if __name__ == "__main__":
     for row in v:
         print(row)
 
-        # attributes
+    # attributes
     print("--- Attributes ---")
     print(f"Shape: {v.shape}")
     print(f"Dimensions: {v.ndim}")
     print(f"Size: {v.size}")
 
     # filling
-    print("--- Filling 3 x 3 x 3 tensor with 10s ---")
+    print("--- Filling 3 x 3 x 3 vector with 10s ---")
     v = np.full((3, 3, 3), 10)
     print(v)
 
@@ -61,3 +62,28 @@ if __name__ == "__main__":
     print(f"{m1 * m2}")
 
     print(np.delete(m1, 2, 1))
+
+    # funzioni aggregate
+    print("--- Aggregate functions ---")
+    print(f"V: {v}")
+    print(f"Min: {v.min()}")
+    print(f"Max: {v.max()}")
+    print(f"Mean: {v.mean()}")
+    print(f"Std deviation: {v.std()}")
+    print(f"Sum: {v.sum()}")
+    print(f"Median: {np.median(v)}")
+
+    # random
+    print("--- Random ---")
+    v = rnd.randint(50, 100, size=(3, 3))
+    print(f"Random vector\n{v}")
+
+    # exporting and importing arrays
+    np.save("array.npy", v)
+    x = np.load("array.npy")
+    print(f"Imported array\n{x}")
+
+    np.savetxt("array.csv", v, delimiter=",")
+    x = np.loadtxt("array.csv", delimiter=",")
+    print(f"Imported array\n{x}")
+
