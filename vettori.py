@@ -69,7 +69,8 @@ if __name__ == "__main__":
     print(f"Min: {v.min()}")
     print(f"Max: {v.max()}")
     print(f"Mean: {v.mean()}")
-    print(f"Std deviation: {v.std()}")
+    print(f"Empirical Variance: {v.var()}")
+    print(f"Standard deviation: {v.std()}")
     print(f"Sum: {v.sum()}")
     print(f"Median: {np.median(v)}")
 
@@ -86,3 +87,4 @@ if __name__ == "__main__":
     # np.savetxt("array.csv", v, delimiter=",")
     # x = np.loadtxt("array.csv", delimiter=",")
     # print(f"Imported array\n{x}")
+
